@@ -6,9 +6,16 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "body-parser": "^1.20.3",
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.0",
+    "framer-motion": "^11.5.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
+    "stripe": "^16.12.0",
+    "swiper": "^11.1.14",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -16,6 +23,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "resolutions": {
+    "postcss": "^8.4.47",
+    "nth-check": "^2.1.1"
   },
   "eslintConfig": {
     "extends": [
