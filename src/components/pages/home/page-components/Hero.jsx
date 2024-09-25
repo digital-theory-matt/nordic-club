@@ -26,9 +26,9 @@ export default function hero({content}){
 
                         </p>
                     </div>
-                    <Button link='memberships' buttonType='primary' buttonText='Enroll Today!' height='50px' width='200px' margin='0 0px 0 0px'/>
+                    <Button link='/memberships' buttonType='primary' buttonText='Enroll Today!' height='50px' width='200px' margin='0 0px 0 0px'/>
                 </div>
-                <div id='hero-picture' alt='Picture of weights' style={{ flex: '1 1 0', alignSelf: 'stretch', padding: '0px', background: 'url(/images/photos/hero-image.png)', backgroundSize: 'cover', backgroundPosition: 'center', minWidth: '320px' }}>
+                <div id='hero-picture' alt='Picture of weights' style={{ flex: '1 1 0', alignSelf: 'stretch', padding: '0px', background: 'url(images/photos/hero-image.png)', backgroundSize: 'cover', backgroundPosition: 'center', minWidth: '320px' }}>
                     <div id='hero-gradient' style={{ width: '100%', height: '100%', zIndex:'10', background: 'linear-gradient(to left, rgba(119, 104, 113, .7) 0%, rgba(119, 104, 113, 0.70) 100%)', backgroundBlendMode: 'multiply',  justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex' }}>
                     </div>
                 </div>

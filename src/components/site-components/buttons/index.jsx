@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function Button(props) {
 
     const handleButtonClick = (e) => {
-        if (props.link) {
-            const target = '_self';
-            window.open(props.link, target);
-        }
+        // if (props.link) {
+        //     return (
+        //         <Link to={props.link} />
+        //     )
+        // }
         if (props.onClick) {
             console.log(e.currentTarget.id);
             props.onClick();
@@ -48,25 +50,27 @@ export default function Button(props) {
         hover: {color: hoverTextColor},
     };
 
-    return (
-        <motion.button
-            className='primary d-flex flex-column justify-content-center align-items-center'
-            id={`${props.id}`}
-            variants={buttonVariants}
-            whileHover='hover'
-            onClick={handleButtonClick}
-            style={{
-                width: props.width,
-                height: props.height,
-                padding: '0 10px',
-                margin: props.margin,
-                backgroundColor: backgroundColor,
-                borderRadius: '5px',
-                overflow: 'hidden',
-                border: 'none'
-            }}
-        >
-            <motion.h4 variants={textVariants} style={{ color: textColor, margin: '0 0 5px 0', fontSize:props.fontSize }}>{props.buttonText}</motion.h4>
-        </motion.button>
+    if (props.link) return (
+        <Link className='d-flex' to={props.link} style={{textDecoration:'none', width:props.width, height:props.height, margin:props.margin}}>
+            <motion.button
+                className='primary d-flex flex-column justify-content-center align-items-center'
+                id={`${props.id}`}
+                variants={buttonVariants}
+                whileHover='hover'
+                onClick={handleButtonClick}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    padding: '0 10px',
+                    // margin: props.margin,
+                    backgroundColor: backgroundColor,
+                    borderRadius: '5px',
+                    overflow: 'hidden',
+                    border: 'none'
+                }}
+            >
+                <motion.h4 variants={textVariants} style={{ color: textColor, margin: '0 0 5px 0', fontSize:props.fontSize }}>{props.buttonText}</motion.h4>
+            </motion.button>
+        </Link>
     );
 }

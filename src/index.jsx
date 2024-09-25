@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -10,12 +10,12 @@ console.log(customerPortal);
 
 export default function Index() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App page='home' customerPortal={customerPortal} />} />
         <Route path="/memberships" element={<App page='memberships' customerPortal={customerPortal} />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

@@ -25,7 +25,7 @@ export default function About({content}) {
                 <h3 style={{margin:'0px 30px 0px 30px', fontWeight: '400'}}>{content.subtitle}</h3>
                 <Button link='memberships' buttonType='tertiary' buttonText='Enroll Today!' height='50px' width='200px' margin='0 30px 0 30px'/>
             </div>
-            <div id='about-photo' className='flex-grow-1' style={{backgroundImage:'url(/images/photos/nordic-inn.jpg)', backgroundSize:'cover', backgroundPosition:'center', height:screenWidth > 767 ? '70vh' : '40vh', width:'100%'}}></div>
+            <div id='about-photo' className='flex-grow-1' style={{backgroundImage:'url(images/photos/nordic-inn.jpg)', backgroundSize:'cover', backgroundPosition:'center', height:screenWidth > 767 ? '70vh' : '40vh', width:'100%'}}></div>
         </div>
     );
 }

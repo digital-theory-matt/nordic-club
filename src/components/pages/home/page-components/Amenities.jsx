@@ -1,9 +1,9 @@
 import React from 'react';
 
 const amenities = [
-    {title: 'pools', src: '/images/svgs/swimmer.svg', alt: 'Swimmer', text: 'Indoor & Outdoor Pools'},
-    {title: 'exerice-room', src: '/images/svgs/treadmill.svg', alt: 'Treadmill', text: 'Cardio Machines'},
-    {title: 'weight-room', src: '/images/svgs/dumbbell-weightlifting.svg', alt: 'Weight Room', text: 'Weight Room'},
+    {title: 'pools', src: 'images/svgs/swimmer.svg', alt: 'Swimmer', text: 'Indoor & Outdoor Pools'},
+    {title: 'exerice-room', src: 'images/svgs/treadmill.svg', alt: 'Treadmill', text: 'Cardio Machines'},
+    {title: 'weight-room', src: 'images/svgs/dumbbell-weightlifting.svg', alt: 'Weight Room', text: 'Weight Room'},
     {title: 'racquetball-court', src: 'images/svgs/racquet.svg', alt: 'Racquet', text: 'Racquetball Court'},
     {title: 'saunas', src: 'images/svgs/hot-tub.svg', alt: 'Hot Tub', text: 'Multiple Saunas'},
     {title: 'game-room', src: 'images/svgs/joystick.svg', alt: 'Joystick', text: 'Game Room'},

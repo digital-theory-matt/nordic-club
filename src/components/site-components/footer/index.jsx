@@ -8,7 +8,7 @@ return(
     <div id='footer-margin' className="d-flex justify-content-between align-items-center flex-wrap" style={{width:'100%', maxWidth:'1000px', gap:'20px'}}>
         <div id='footer-logo' className='d-flex flex-column justify-content-end align-items-start' style={{minWidth:'320px'}}>
             <div className="Frame1" style={{alignSelf: 'stretch', height: 105, justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                <Logo />
+                <Logo link={'/'}/>
                 <div className="NordicInnText" style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex'}}>
                     <div className="LookingToStayAtTheNordicInn" style={{alignSelf: 'stretch', color: 'white', fontSize: 12, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>Looking to stay at the Nordic Inn?</div>
                     <div className="ClickHere" style={{alignSelf: 'stretch', color: 'white', fontSize: 12, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { motion, animate, useScroll, useMotionValueEvent } from 'framer-motion';
 import Logo from '../logo/index.jsx';
 import Button from '../buttons/index.jsx';
@@ -42,6 +44,7 @@ export default function Nav(props) {
 
   const handleLinkClick =() => {
     setMenuOpen(false);
+    animate('#nav', {y: -100}, {type: 'spring', bounce:0, duration:.2});
   }
 
   const { scrollY } = useScroll()
@@ -61,27 +64,26 @@ export default function Nav(props) {
     <motion.div id='nav' className='d-flex justify-content-between align-items-center' style={{width: '100%', height: '100%', padding: 10, background: '#776871', position:'sticky', top:'0', zIndex:'1000'}}>
         <div id='nav-margin' className={`d-flex ${menuOpen===false? 'align-items-center' : 'flex-column align-items-start'} justify-content-between`} style={{width:'100%', paddingLeft: 30, paddingRight: 30, gap:'20px'}}>
             <div id='nav-logo-row' className="d-flex flex-row justify-content-between align-items-center" style={{width:'100%'}}>
-                <Logo />
-
+                <Logo link={'/'}/>
                 <div id='nav-links' className="d-flex" style={{padding: 10, gap: 10}}>
                     {screenWidth <= 768 && (
                     <div id='nav-menu' onClick={handleClick} style={{width: 50, height: 50}}>
-                        <img id='nav-menu-icon' alt="menu" src="/images/svgs/hamburger.svg" style={{width: 50, height: 50, position: 'absolute'}}/>
+                        <img id='nav-menu-icon' alt="menu" src="images/svgs/hamburger.svg" style={{width: 50, height: 50, position: 'absolute'}}/>
                     </div>
                     )}
                 {screenWidth > 768 && (
                     <div className='d-flex align-items-center' style={{gap:'10px'}}>
                         <div className="About" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
-                            <a href='/#gallery' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>Gallery</a>
+                          <HashLink to='#gallery' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut} onClick={handleLinkClick}>Gallery</HashLink>
                         </div>
                         <div className="About" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
-                            <a href='/#amenities' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>Amenities</a>
+                          <HashLink to='#amenities' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut} onClick={handleLinkClick}>Amenities</HashLink>
                         </div>
                         <div className="About" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
-                            <a href='/#about' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>About</a>
+                          <HashLink to='#about' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut} onClick={handleLinkClick}>About</HashLink>
                         </div>
                         <div className="FAQs" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
-                            <a href='/#faqs' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>FAQs</a>
+                          <HashLink to='#faqs' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut} onClick={handleLinkClick}>FAQs</HashLink>
                         </div>
                         <Button link='memberships' buttonType='primary' buttonText='Enroll Today!' height='40px' width='200px' margin='0 0px 0 0px'/>
                         <Button link={props.customerPortal} buttonType='secondary' buttonText='Member Login' height='40px' width='200px' margin='0 0px 0 0px'/>
@@ -93,18 +95,18 @@ export default function Nav(props) {
             {menuOpen && (
                 <div id='nav-mobile-menu-active' className='d-flex flex-column' style={{gap:'20px', width:'100%'}}>
                     <div id='nav-menu-links' style={{gap:'20px'}}>
-                    <div className="About" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
-                            <a href='#gallery' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut} onClick={handleLinkClick}>Gallery</a>
-                        </div>
-                        <div className="About" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
-                            <a href='#amenities' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut} onClick={handleLinkClick}>Amenities</a>
-                        </div>
-                        <div className="About" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
-                            <a href='#about' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut} onClick={handleLinkClick}>About</a>
-                        </div>
-                        <div className="FAQs" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
-                            <a href='#faqs' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut} onClick={handleLinkClick}>FAQs</a>
-                        </div>
+                      <div id="gallery-link" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
+                        <HashLink onClick={handleLinkClick} to='#gallery' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>Gallery</HashLink>
+                      </div>
+                      <div className="About" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
+                        <HashLink onClick={handleLinkClick} to='#amenities' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>Amenities</HashLink>
+                      </div>
+                      <div className="About" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
+                        <HashLink onClick={handleLinkClick} to='#about' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>About</HashLink>
+                      </div>
+                      <div className="FAQs" style={{color: 'white', fontSize: 14, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
+                        <HashLink onClick={handleLinkClick} to='#faqs' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>FAQs</HashLink>
+                      </div>
                     </div>
                     <div id='nav-menu-buttons' className='d-flex justify-content-center' style={{width:'100%', gap:'20px'}}>
                         <Button link='memberships' buttonType='primary' buttonText='Enroll Today!' height='40px' width='50%' fontSize='14px' margin='0 0px 0 0px'/>

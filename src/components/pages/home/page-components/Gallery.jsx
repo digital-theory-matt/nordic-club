@@ -37,7 +37,8 @@ export default function Gallery(){
 
     }, []);
 
-    return(<div id="gallery" className='d-flex flex-column justify-content-center align-items-center' style={{width: '100%', height: '75vh', padding: 15, background: 'white', gap:'10px', margin:'50px 0 50px 0'}}>
+    return(
+    <div id="gallery" className='d-flex flex-column justify-content-center align-items-center' style={{width: '100%', height: '75vh', padding: 15, background: 'white', gap:'10px', margin:'50px 0 50px 0'}}>
         <div id="gallery-header" className='d-flex justify-content-center align-items-center'>
             <h3 style={{fontWeight:'400', color:'var(--primary-color)'}}>Gallery</h3>
         </div>
