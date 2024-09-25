@@ -1,0 +1,48 @@
+{
+    "title": "Come enjoy Lincoln NH's Community Health and Fitness Club",
+    "subtitle": "The Nordic Club offers your health and relxation needs in Lincoln NH",
+    "bullets": [ 
+        "Indoor and outdoor heated pools",
+        "Indoor and outdoor hot tubs",
+        "Cardio room",
+        "Weight room",
+        "Saunas",
+        "Locker rooms with private showers",
+        "Racquetball court",
+        "Game room"
+    ],
+    "about-title": "Proudly located in Lincoln NH",
+    "about-subtitle": "The Nordic Club is a publicly available condominium resort for those who live or visit the Lincoln NH area.",
+    "faqs" : {
+        "title": "Frequently Asked Questions",
+        "questions": [
+            {
+                "question": "Can I buy a day pass for the Nordic Club?",
+                "answer": "To ensure there is ample space for existing members should they need it, we do not offer day passes. You are welcome to purchase a single months pass if you are visiting and wish to use our facilities."
+            },
+            {
+                "question": "What are the Nordic Clubs hours?",
+                "answer": "We are open daily from 8am to 9pm. We are closed on all major holidays."
+            },
+            {
+                "question": "Does the Nordic Club allow guests?",
+                "answer": "We do allow guests for a small fee. Please see the front-desk staff for assistance."
+            },
+            {
+                "question": "Does the Nordic Club have towel service?",
+                "answer": "No, we do not provide towels. Please plan accordingly and bring your own towels for pools or saunas."
+            },
+            {
+                "question": "Do you offer any discounts on passes?",
+                "answer": "Yes! We offer a 10% discount for military service members, veterans, and first responders. Please specify that you qualify for this discount at check-in, and we will ask you to provide proof of service when you are admitted as a member."
+            }
+        ]
+    },
+    "call-to-action": "Enjoy the Nordic Club Today!",
+    "contact": {
+        "title": "Contact",
+        "address": "227 Main Street, Lincoln NH 03251",
+        "phone": "+1(603) 745-8866",
+        "email": "TheNordicClub@Yahoo.com"
+    }
+}
