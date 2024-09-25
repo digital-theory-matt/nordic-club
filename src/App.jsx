@@ -14,7 +14,6 @@ import siteContent from './content.json';
 
 function App(props) {
 
-  console.log(siteContent);
   if(props.page === 'home') {
     return (
       <div>

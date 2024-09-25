@@ -3,7 +3,7 @@ import { motion, animate, useScroll, useMotionValueEvent } from 'framer-motion';
 import Logo from '../logo/index.jsx';
 import Button from '../buttons/index.jsx';
 
-export default function Nav(customerPortal) {
+export default function Nav(props) {
 
   // Initialize state to hold the screen width
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -84,7 +84,7 @@ export default function Nav(customerPortal) {
                             <a href='/#faqs' style={{color:'white', textDecoration:'none'}} onMouseOver={handleLinkMouseOver} onMouseOut={handleLinkMouseOut}>FAQs</a>
                         </div>
                         <Button link='memberships' buttonType='primary' buttonText='Enroll Today!' height='40px' width='200px' margin='0 0px 0 0px'/>
-                        <Button link={customerPortal} buttonType='secondary' buttonText='Member Login' height='40px' width='200px' margin='0 0px 0 0px'/>
+                        <Button link={props.customerPortal} buttonType='secondary' buttonText='Member Login' height='40px' width='200px' margin='0 0px 0 0px'/>
                     </div>
                 )}
                 </div>
@@ -108,7 +108,7 @@ export default function Nav(customerPortal) {
                     </div>
                     <div id='nav-menu-buttons' className='d-flex justify-content-center' style={{width:'100%', gap:'20px'}}>
                         <Button link='memberships' buttonType='primary' buttonText='Enroll Today!' height='40px' width='50%' fontSize='14px' margin='0 0px 0 0px'/>
-                        <Button link={customerPortal} buttonType='secondary' buttonText='Member Login' height='40px' width='50%' fontSize='14px' margin='0 0px 0 0px'/>
+                        <Button link={props.customerPortal} buttonType='secondary' buttonText='Member Login' height='40px' width='50%' fontSize='14px' margin='0 0px 0 0px'/>
                     </div>
                 </div>
             )}
