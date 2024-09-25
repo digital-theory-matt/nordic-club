@@ -7,8 +7,8 @@ import 'swiper/css/navigation';
 
 const gallery = [
     {photoSrc: 'images/photos/weight-room.jpg', caption: 'Come check out our weight room'},
-    {photoSrc: 'images/photos/exercise-room.jpg', caption: 'Maybe you want some cardio?'},
     {photoSrc: 'images/photos/locker-room.jpg', caption: 'Locker rooms are available'},
+    {photoSrc: 'images/photos/exercise-room.jpg', caption: 'Maybe you want some cardio?'},
     {photoSrc: 'images/photos/sauna.jpg', caption: 'Mens, Womens, and coed saunas'},
     {photoSrc: 'images/photos/nordic_dumbells.jpg', caption: 'We have free weights too'},
     {photoSrc: 'images/photos/court.jpg', caption: 'How about a game of racquetball?'},
@@ -37,21 +37,21 @@ export default function Gallery(){
 
     }, []);
 
-    return(<div id="gallery" className='d-flex flex-column justify-content-center align-items-center' style={{width: '100%', height: '75vh', padding: 15, background: 'white', gap:'10px'}}>
+    return(<div id="gallery" className='d-flex flex-column justify-content-center align-items-center' style={{width: '100%', height: '75vh', padding: 15, background: 'white', gap:'10px', margin:'50px 0 50px 0'}}>
         <div id="gallery-header" className='d-flex justify-content-center align-items-center'>
             <h3 style={{fontWeight:'400', color:'var(--primary-color)'}}>Gallery</h3>
         </div>
 
-        <div style={{height:'70%', width:'100%', cursor:'grab'}}>
+        <div style={{height:'100%', width:'100%', cursor:'grab'}}>
         <Swiper className='d-flex' style={{height:'100%', width:'100%'}} 
             modules={[Navigation]}
-            slidesPerView={(screenWidth > 768 ? 3 : 1)}
+            slidesPerView={(screenWidth > 768 ? 2 : 1)}
             navigation
             // onSlideChange={(swiperSlide) => setSwiperSlide(swiperSlide.activeIndex)}
         >
             {gallery.map((photo, index) => (
-                <SwiperSlide key={index} style={{height:'100%', width:'100%'}}>
-                    <img src={`${photo.photoSrc}`} alt={photo.caption} style={{height:'100%', width:'100%', objectFit:'contain'}}/>
+                <SwiperSlide key={index} style={{height:'100%', width:'100%', padding:'5px'}}>
+                    <img src={`${photo.photoSrc}`} alt={photo.caption} style={{height:'100%', width:'100%', objectFit:'cover'}}/>
                     {/* <h3 style={{fontWeight:'400'}}>{gallery[swiperSlide].caption}</h3> */}
                 </SwiperSlide>
             ))}

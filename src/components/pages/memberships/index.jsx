@@ -52,7 +52,7 @@ export default function Memberships() {
     }
 
     return(
-        <div id='memberships' className='d-flex flex-column' style={{width:'100%', minHeight:'80vh'}}>
+        <div id='memberships' className='d-flex flex-column' style={{width:'100%'}}>
             <div id='memberships-duration-row' className='d-flex justify-content-center align-items-center mt-auto' style={{height:'50px', width:'100%', gap:'20px'}}>
                 {membershipTerms.map((term, index) => {
                     return (

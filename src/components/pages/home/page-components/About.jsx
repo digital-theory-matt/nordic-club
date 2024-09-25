@@ -19,13 +19,13 @@ export default function About({content}) {
     }, []);
 
     return (
-        <div id='about' className='d-flex flex-column flex-md-row' style={{width:'100%', height:'100vh', margin:'100px 0px 100px 0px'}}>
-            <div id='about-content' className='d-flex flex-column justify-content-center' style={{height:screenWidth > 768 ? '100%' : '50%', width:'100%', maxWidth:'600px', gap:'10px'}}>
+        <div id='about' className='d-flex flex-column flex-lg-row' style={{width:'100%', margin:'100px 0px 100px 0px', gap:'20px'}}>
+            <div id='about-content' className='d-flex flex-column justify-content-center my-auto' style={{height:screenWidth > 767 ? '100%' : '100%', width:'100%', maxWidth:'600px', gap:'10px'}}>
                 <h2 style={{margin:'0px 30px 0px 30px', fontWeight:'300'}}>{content.title}</h2>
                 <h3 style={{margin:'0px 30px 0px 30px', fontWeight: '400'}}>{content.subtitle}</h3>
                 <Button link='memberships' buttonType='tertiary' buttonText='Enroll Today!' height='50px' width='200px' margin='0 30px 0 30px'/>
             </div>
-            <div id='about-photo' className='flex-grow-1' style={{backgroundImage:'url(/images/photos/nordic-inn.jpg)', backgroundSize:'cover', backgroundPosition:'center', height:screenWidth > 768 ? '100%' : '50%', width:'100%'}}></div>
+            <div id='about-photo' className='flex-grow-1' style={{backgroundImage:'url(/images/photos/nordic-inn.jpg)', backgroundSize:'cover', backgroundPosition:'center', height:screenWidth > 767 ? '70vh' : '40vh', width:'100%'}}></div>
         </div>
     );
 }

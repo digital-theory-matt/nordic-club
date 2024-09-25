@@ -11,7 +11,9 @@ return(
                 <Logo />
                 <div className="NordicInnText" style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex'}}>
                     <div className="LookingToStayAtTheNordicInn" style={{alignSelf: 'stretch', color: 'white', fontSize: 12, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>Looking to stay at the Nordic Inn?</div>
-                    <div className="ClickHere" style={{alignSelf: 'stretch', color: 'white', fontSize: 12, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>Click here.</div>
+                    <div className="ClickHere" style={{alignSelf: 'stretch', color: 'white', fontSize: 12, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>
+                        <a href='https://www.nordic-inn.com/' style={{color:'white'}}>Click here</a>
+                    </div>
                 </div>
             </div>
             <div className="Copyright2024TheNordicClub" style={{alignSelf: 'stretch', color: 'white', fontSize: 12, fontFamily: 'Lato', fontWeight: '300', wordWrap: 'break-word'}}>© Copyright 2024 The Nordic Club. </div>
